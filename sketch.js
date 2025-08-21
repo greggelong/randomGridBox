@@ -96,7 +96,7 @@ function draw() {
 
   // Numbers 8→1 down the left edge (far=8 at top, near=1 at bottom)
   for (let j = 0; j < cells; j++) {
-    const rowLabel = cells - j; // chess order: far=8 ... near=1
+    const rowLabel = j + 1; // chess order: far=8 ... near=1
     const x = -gridSize / 2 - 20; // just left of the board
     const z = gridSize / 2 - spacing / 2 - j * spacing;
     text(rowLabel, x, z);
