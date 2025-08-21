@@ -17,7 +17,9 @@ let cnv;
 
 function preload() {
   // Use your OTF font path
-  font = loadFont("/assets/Chunk.otf");
+  font = loadFont(
+    "https://greggelong.github.io/randomGridBox/assets/Chunk.otf"
+  );
 }
 
 function setup() {
