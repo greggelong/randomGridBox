@@ -1,0 +1,16 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+.warning-background {
+  background: repeating-linear-gradient(
+    -45deg, /* Slanted angle */
+    black 0px,
+    black 80px,  /* Thickness of black stripe */
+    yellow 80px,
+    yellow 160px  /* Thickness of yellow stripe */
+  );
+}
