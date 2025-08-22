@@ -14,12 +14,14 @@ let savedThisRound = false;
 let cols = ["A", "B", "C", "D", "E", "F", "G", "H"];
 let font;
 let cnv;
+let aw;
 
 function preload() {
   // Use your OTF font path
   font = loadFont(
     "https://greggelong.github.io/randomGridBox/assets/Chunk.otf"
   );
+  aw = loadImage("aw.jpg");
 }
 
 function setup() {
@@ -57,7 +59,18 @@ function setup() {
 }
 
 function draw() {
-  background(30);
+  background(0);
+  orbitControl(1, 1, 1);
+  push();
+  rotateX(-PI / 6);
+  rotateY(PI / 4);
+  translate(0, -200, -300);
+  texture(aw);
+  plane(200, 200);
+
+  pop();
+  texture(aw);
+  //image(aw, 0, 0, -100);
 
   // Nice, neutral lighting (keeps your colors but gives shape)
   ambientLight(80);
